@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const PORT = process.env.PORT || 5000
 
 // app.set('view engine', 'pug');
 app.set('view engine', 'ejs');
@@ -13,6 +14,6 @@ app.get('/', (req, res) => {
 });
 
 
-const server = app.listen(7000, () => {
+const server = app.listen(PORT, () => {
   console.log(`Express running → PORT ${server.address().port}`);
 });
